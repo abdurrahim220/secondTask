@@ -10,6 +10,7 @@ import Combo from "../Combo/Combo";
 import Snacks from "../Snacks/Snacks";
 import Beverages from "../Beverages/Beverages";
 import Additionally from "../Additionally/Additionally";
+import Cart from "../Cart/Cart";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
       <div className="border">
         <Sidebar />
       </div>
-      <div className="border">
+      <div className="border w-[1117px]">
         <WhatsNew />
         <NewItems />
         <Boxes />
@@ -27,6 +28,9 @@ const Home = () => {
         <Combo />
         <Beverages />
         <Additionally />
+      </div>
+      <div>
+        <Cart />
       </div>
     </div>
   );

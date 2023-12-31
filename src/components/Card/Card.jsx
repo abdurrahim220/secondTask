@@ -11,8 +11,8 @@ const Card = () => {
         />
       </div>
       <div>
-        <h1 className="text-[#21201F] text-[24px] mr-1 font-medium">580 T</h1>
-        <p className="text-[16px] mt-1 text-[#21201F] text-ellipsis	">
+        <h1 className="text-[#21201F] text-[24px] mr-1 truncate font-medium">580 T</h1>
+        <p className="text-[16px] mt-1 text-[#21201F] truncate">
           Sanders Mega Burger Box
         </p>
       </div>

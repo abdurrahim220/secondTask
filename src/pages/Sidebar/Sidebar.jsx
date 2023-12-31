@@ -5,7 +5,7 @@ import Beverages from "../Beverages/Beverages";
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className="w-[232px] mr-8 block">
       <div className="flex flex-col space-y-2">
         <Link to="whats-new" className="cursor-pointer">
           What's New
