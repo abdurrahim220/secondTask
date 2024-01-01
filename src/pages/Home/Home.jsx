@@ -1,38 +1,26 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import { Outlet } from "react-router-dom";
-import WhatsNew from "../WhatsNew/WhatsNew";
-import NewItems from "../NewItems/NewItems";
-import Boxes from "../Boxes/Boxes";
-import ComboBaskets from "../ComboBaskets/ComboBaskets";
-import JuicyChicken from "../JuicyChicken/JuicyChicken";
-import Combo from "../Combo/Combo";
-import Snacks from "../Snacks/Snacks";
-import Beverages from "../Beverages/Beverages";
-import Additionally from "../Additionally/Additionally";
+
 import Cart from "../Cart/Cart";
+import AllProductContainer from "../AllProductContainer/AllProductContainer";
 
 const Home = () => {
   return (
-    <div className="flex gap-3">
-      <div className="border">
+    <div class="flex justify-center mx-auto max-w-[1873px]">
+
+<div className="flex gap-3">
+      <div>
         <Sidebar />
       </div>
-      <div className="border w-[1117px]">
-        <WhatsNew />
-        <NewItems />
-        <Boxes />
-        <ComboBaskets />
-        <JuicyChicken />
-        <Snacks />
-        <Combo />
-        <Beverages />
-        <Additionally />
+      <div className="">
+        <AllProductContainer />
       </div>
       <div>
         <Cart />
       </div>
     </div>
+    </div>
+   
   );
 };
 
