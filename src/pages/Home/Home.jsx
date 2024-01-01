@@ -1,27 +1,16 @@
-import React from "react";
-import Sidebar from "../Sidebar/Sidebar";
-
-import Cart from "../Cart/Cart";
-import AllProductContainer from "../AllProductContainer/AllProductContainer";
+import React from 'react'
+import Shops from './Shops/Shops'
+import HomeBanner from '../../components/HomeBanner/HomeBanner'
+import Offers from '../../components/Offers/Offers'
 
 const Home = () => {
   return (
-    <div class="flex justify-center mx-auto max-w-[1873px]">
-
-<div className="flex gap-3">
-      <div>
-        <Sidebar />
-      </div>
-      <div className="">
-        <AllProductContainer />
-      </div>
-      <div>
-        <Cart />
-      </div>
+    <div className='max-w-[1536px] mx-auto px-6 mt-[124px]'>
+        <HomeBanner/>
+        <Shops/>
+        <Offers/>
     </div>
-    </div>
-   
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

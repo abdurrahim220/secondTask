@@ -1,19 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FaBars, FaLocationArrow, FaSearch, FaTimes, FaUserAlt } from "react-icons/fa";
-import { FaLocationCrosshairs, FaLocationPin, FaLocationPinLock } from "react-icons/fa6";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FaBars, FaSearch, FaTimes, FaUserAlt } from "react-icons/fa";
 import { GrLocationPin } from "react-icons/gr";
 import { IoIosArrowDown } from "react-icons/io";
 import { TbWorld } from "react-icons/tb";
-
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
   const navigate = useNavigate();
-
-  const url = "https://dhakabusserver.onrender.com";
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -36,9 +33,11 @@ const Navbar = () => {
   return (
     <header className="w-full mx-auto border-b-2  z-[50] fixed top-0">
       <nav
-        className={`py-4  px-4 bg-primary-background ${
-          isSticky ? "shadow-md px-4 " : ""
-        }`}
+        className={`py-4 px-4 ${
+          location.pathname === "/"
+            ? "bg-secondary-background"
+            : "bg-primary-background"
+        } ${isSticky ? "shadow-md px-4 " : ""}`}
       >
         <div className=" mx-auto">
           <div className="flex justify-between items-center gap-8">
@@ -47,33 +46,35 @@ const Navbar = () => {
                 src="https://avatars.mds.yandex.net/get-bunker/128809/0efb578cd41a9939800311677e6f4f8a12f04e90/orig"
                 alt=""
               />
-              <div class="relative ">
-                <label class="flex items-center">
-                  <FaSearch class="absolute left-4 text-gray-500" />
+              <div className="relative ">
+                <label className="flex items-center">
+                  <FaSearch className="absolute left-4 text-gray-500" />
                   <input
                     type="text"
-                    class="w-[100%] rounded-[16px] h-[48px] px-12 py-3 border-2 border-[#FCE000] focus:outline-none focus:border-[#FCE000]"
+                    className="w-[100%] rounded-[16px] h-[48px] px-12 py-3 border-2 border-[#FCE000] focus:outline-none focus:border-[#FCE000]"
                     placeholder="Search for restaurants, food or products"
                   />
-                  <button class="absolute right-0 h-[48px] rounded-r-[16px] bg-[#FCE000] px-2 font-medium">
+                  <button className="absolute right-0 h-[48px] rounded-r-[16px] bg-[#FCE000] px-2 font-medium">
                     Search
                   </button>
                 </label>
               </div>
               <button className="h-[48px] px-4 py-2 font-normal rounded-[16px] flex gap-1 items-center  bg-[#EEEEEE]">
-                <GrLocationPin size={20}/>AddAddress<IoIosArrowDown size={20}/>
+                <GrLocationPin size={20} />
+                AddAddress
+                <IoIosArrowDown size={20} />
               </button>
             </div>
 
             <div className="flex items-center gap-5">
               <div className="h-[48px] text-center">
-                <TbWorld className="text-center"/>
+                <TbWorld className="text-center" />
                 <p>English</p>
               </div>
-              <button className="h-[48px] px-8 py-2 font-normal rounded-[16px] bg-[#EEEEEE]">Login</button>
+              <button className="h-[48px] px-8 py-2 font-normal rounded-[16px] bg-[#EEEEEE]">
+                Login
+              </button>
             </div>
-
-           
 
             {/* menu btn for only mobile device */}
             <div className="md:hidden">
