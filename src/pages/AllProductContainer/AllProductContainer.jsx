@@ -9,9 +9,12 @@ import Combo from "../Combo/Combo";
 import Beverages from "../Beverages/Beverages";
 import Additionally from "../Additionally/Additionally";
 
+import SingleProductBanner from "../../components/HomeBanner/SingleProductBanner";
+
 const AllProductContainer = () => {
   return (
-    <div className="w-[1117px] top-[112px]">
+    <div className="w-[1117px] lg:top-[112px]">
+   <SingleProductBanner/>
       <WhatsNew />
       <NewItems />
       <Boxes />

@@ -46,7 +46,7 @@ const Navbar = () => {
                 src="https://avatars.mds.yandex.net/get-bunker/128809/0efb578cd41a9939800311677e6f4f8a12f04e90/orig"
                 alt=""
               />
-              <div className="relative ">
+              <div className="relative lg:block hidden ">
                 <label className="flex items-center">
                   <FaSearch className="absolute left-4 text-gray-500" />
                   <input
@@ -59,7 +59,7 @@ const Navbar = () => {
                   </button>
                 </label>
               </div>
-              <button className="h-[48px] px-4 py-2 font-normal rounded-[16px] flex gap-1 items-center  bg-[#EEEEEE]">
+              <button className="h-[48px] lg:flex hidden px-4 py-2 font-normal rounded-[16px] gap-1 items-center  bg-[#EEEEEE]">
                 <GrLocationPin size={20} />
                 AddAddress
                 <IoIosArrowDown size={20} />
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <TbWorld className="text-center" />
                 <p>English</p>
               </div>
-              <button className="h-[48px] px-8 py-2 font-normal rounded-[16px] bg-[#EEEEEE]">
+              <button className="h-[48px] lg:block hidden px-8 py-2 font-normal rounded-[16px] bg-[#EEEEEE]">
                 Login
               </button>
             </div>
@@ -89,10 +89,14 @@ const Navbar = () => {
 
           {/* items for mobile device*/}
           <div
-            className={`space-y-4 px-4 mt-16 bg-primary-background ${
+            className={`space-y-4 flex justify-center px-4 mt-16 bg-primary-background ${
               isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"
             }`}
-          ></div>
+          >
+            <button className="h-[48px]  px-8 py-2 font-normal rounded-[16px] ">
+              Login
+            </button>
+          </div>
         </div>
       </nav>
     </header>

@@ -6,7 +6,11 @@ export default {
       colors: {
         "primary-text": "#21201F",
         "primary-background": "#F5F4F2",
-        "secondary-background":"#ffffff"
+        "secondary-background": "#ffffff",
+      },
+      backgroundImage: {
+        "single-product":
+          "url('./src/assets/singleproduct.jpg')",
       },
     },
   },
